@@ -1,0 +1,22 @@
+{
+  "name": "electricscooterapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage=true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AfreenSMohammed/ElectricScooterApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AfreenSMohammed/ElectricScooterApp/issues"
+  },
+  "homepage": "https://github.com/AfreenSMohammed/ElectricScooterApp#readme",
+  "dependencies": {
+    "jest": "^27.0.6"
+  }
+}
