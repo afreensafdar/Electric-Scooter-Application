@@ -6,7 +6,7 @@ class Scooter {
         
     }
 
-    updateLocation(newlocation){
+    updateLocation(newlocation) {
         this.location=newlocation
 
     }
@@ -17,6 +17,20 @@ class Scooter {
         await new Promise(resolve => setTimeout(resolve, 2000)); // wait 2 seconds
 
         console.log('Charge complete');   
+    }
+
+    rentScooter() {
+        if (this.charge!=100) {
+            console.log("Scooter needs to be charged.");
+            this.charge();
+        } else {
+            console.log('Enjoy your trip');
+        }
+    }
+
+    returnScooter() {
+        this.charge = 0;
+        console.log("Thanks for your service!");
     }
 }
 

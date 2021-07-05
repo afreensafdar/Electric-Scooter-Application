@@ -23,7 +23,7 @@ class User{
 
 
     getRegistered() {
-        if(this.age>=18 && this.username !== null && this.password !== null){
+        if(this.age>=18) {
             return "Registered Successfully";
 
             } else {
@@ -31,13 +31,6 @@ class User{
             }
     }
 
-    rentScooter(){
-
-    }
-
-    returnScooter() {
-
-    }
 
 
     

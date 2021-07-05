@@ -2,7 +2,7 @@ const ChargingStation=require('../src/ChargingStation')
 const Scooter= require('../src/Scooter')
 
 describe('Charging Station Object',()=>{
-    const chargingStation=new ChargingStation(154,'Scooter Rental','Dallas')
+    const chargingStation=new ChargingStation(154,'Scooter Rental','Dallas',32)
     test ('charging station has a serialId',()=>{
         expect(chargingStation.serialId).toBe(154)
     });
@@ -15,7 +15,8 @@ describe('Charging Station Object',()=>{
         expect(chargingStation.location).toBe('Dallas')
     });
 
-
-
+    test('charging station has range',()=>{
+        expect(chargingStation.range).toBe(32)
+        })
 
 })

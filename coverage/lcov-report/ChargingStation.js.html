@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">50% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>5/10</span>
+                <span class='fraction'>6/12</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">16.67% </span>
+                <span class="strong">25% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/6</span>
+                <span class='fraction'>1/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">50% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>5/10</span>
+                <span class='fraction'>6/12</span>
             </div>
         
             
@@ -88,15 +88,9 @@
 <a name='L29'></a><a href='#L29'>29</a>
 <a name='L30'></a><a href='#L30'>30</a>
 <a name='L31'></a><a href='#L31'>31</a>
-<a name='L32'></a><a href='#L32'>32</a>
-<a name='L33'></a><a href='#L33'>33</a>
-<a name='L34'></a><a href='#L34'>34</a>
-<a name='L35'></a><a href='#L35'>35</a>
-<a name='L36'></a><a href='#L36'>36</a>
-<a name='L37'></a><a href='#L37'>37</a>
-<a name='L38'></a><a href='#L38'>38</a>
-<a name='L39'></a><a href='#L39'>39</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L32'></a><a href='#L32'>32</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -109,36 +103,29 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span></td><td class="text"><pre class="prettyprint lang-js">class ChargingStation {
-    constructor(serialId,name,location){
+    constructor(serialId,name,location,range){
         this.serialId=serialId
         this.name=name
         this.location=location
         this.scooter=[]
+        this.range=range
     }
 &nbsp;
 <span class="fstat-no" title="function not covered" >    ad</span>dScooter(scooter){
@@ -146,11 +133,11 @@
 &nbsp;
     }
 &nbsp;
-&nbsp;
 <span class="fstat-no" title="function not covered" >    re</span>moveScooter(username,scooter){
-<span class="cstat-no" title="statement not covered" >        this.scooter.pop(scooter)</span>
+        const index = <span class="cstat-no" title="statement not covered" >this.scooter.indexOf(scooter);</span>
+<span class="cstat-no" title="statement not covered" >            this.scooter.splice(index, 1);</span>
+        }
 &nbsp;
-    }
 &nbsp;
 <span class="fstat-no" title="function not covered" >    pr</span>ocessPayment() {
 <span class="cstat-no" title="statement not covered" >        if(this.addScooter()==true){</span>
@@ -159,18 +146,10 @@
         else {
 <span class="cstat-no" title="statement not covered" >            return "Do the payment"</span>
         }
-        
+    }
     }
 &nbsp;
-<span class="fstat-no" title="function not covered" >    re</span>pairScooter() {
 &nbsp;
-    }
-&nbsp;
-<span class="fstat-no" title="function not covered" >    ch</span>argeScooter(){
-&nbsp;
-    }
-&nbsp;
-}
 module.exports=ChargingStation;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -178,7 +157,7 @@ module.exports=ChargingStation;</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Fri Jul 02 2021 16:07:50 GMT-0500 (Central Daylight Time)
+                at Mon Jul 05 2021 11:38:48 GMT-0500 (Central Daylight Time)
             </div>
         </div>
         <script src="prettify.js"></script>
